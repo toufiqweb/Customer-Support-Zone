@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "Login page not loading",
+    "description": "The login page keeps showing a blank white screen after entering credentials. This started happening since yesterday.",
+    "customer": "Alice Johnson",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-28T09:15:00Z"
+  },
+  {
+    "id": 2,
+    "title": "Payment failed during checkout",
+    "description": "I tried to complete my order but the payment is failing with error code 402. Using Visa card.",
+    "customer": "Bob Smith",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2026-03-28T14:30:00Z"
+  },
+  {
+    "id": 3,
+    "title": "Request for invoice copy",
+    "description": "I need a copy of the invoice for my purchase made on March 15th (Order #ORD-7842).",
+    "customer": "Carol Williams",
+    "priority": "Low",
+    "status": "Closed",
+    "createdAt": "2026-03-29T11:45:00Z"
+  },
+  {
+    "id": 4,
+    "title": "App crashing on Android",
+    "description": "The mobile app crashes immediately after opening on my Samsung Galaxy S23. Version 2.3.1.",
+    "customer": "David Lee",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-29T16:20:00Z"
+  },
+  {
+    "id": 5,
+    "title": "Slow loading times on dashboard",
+    "description": "The dashboard takes over 30 seconds to load every time. This is affecting my daily work.",
+    "customer": "Emma Brown",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2026-03-30T08:10:00Z"
+  },
+  {
+    "id": 6,
+    "title": "Account suspension issue",
+    "description": "My account was suddenly suspended without any notification. Please check and reactivate it.",
+    "customer": "Frank Garcia",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-30T10:55:00Z"
+  },
+  {
+    "id": 7,
+    "title": "Feature request: Dark mode",
+    "description": "It would be great if you could add a dark mode option for the web application.",
+    "customer": "Grace Martinez",
+    "priority": "Low",
+    "status": "Closed",
+    "createdAt": "2026-03-30T13:40:00Z"
+  },
+  {
+    "id": 8,
+    "title": "Refund not received",
+    "description": "I requested a refund 10 days ago but haven't received the money back yet.",
+    "customer": "Henry Wilson",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2026-03-30T17:25:00Z"
+  },
+  {
+    "id": 9,
+    "title": "Email notifications not working",
+    "description": "I'm not receiving any email notifications for new messages or updates.",
+    "customer": "Isabella Taylor",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2026-03-31T07:50:00Z"
+  },
+  {
+    "id": 10,
+    "title": "Wrong product delivered",
+    "description": "I ordered a wireless keyboard but received a mouse instead. Order number #ORD-8921.",
+    "customer": "Jack Anderson",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-31T12:15:00Z"
+  },
+  {
+    "id": 11,
+    "title": "Password reset link expired",
+    "description": "The password reset link I received keeps saying it's expired even though I just requested it.",
+    "customer": "Karen Thomas",
+    "priority": "Low",
+    "status": "Closed",
+    "createdAt": "2026-03-31T14:30:00Z"
+  },
+  {
+    "id": 12,
+    "title": "Unable to upload files",
+    "description": "File upload feature is not working. Getting 'Upload failed' error for all file types.",
+    "customer": "Liam Jackson",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2026-03-31T19:05:00Z"
+  }
+]
