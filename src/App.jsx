@@ -1,5 +1,6 @@
 import './App.css'
 import Navbar from './componets/homepage/Navbar'
+import TicketStatus from './componets/homepage/TicketStatus'
 
 function App() {
 
@@ -7,6 +8,7 @@ function App() {
     <>
 
       <Navbar/>
+      <TicketStatus/>
       
       <h1>hello react</h1>
     </>
