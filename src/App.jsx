@@ -1,4 +1,5 @@
 import './App.css'
+import Footer from './componets/homepage/Footer'
 import Navbar from './componets/homepage/Navbar'
 import TicketStatus from './componets/homepage/TicketStatus'
 
@@ -10,7 +11,8 @@ function App() {
       <Navbar/>
       <TicketStatus/>
       
-      <h1>hello react</h1>
+      <h1 className='h-[30vh]'>hello react</h1>
+      <Footer/>
     </>
   )
 }
