@@ -4,6 +4,17 @@ import Footer from './componets/homepage/Footer'
 import Navbar from './componets/homepage/Navbar'
 import TicketStatus from './componets/homepage/TicketStatus'
 
+
+
+const customerTicketDataFetch = async ()=> {
+
+  const res = await fetch("/data.json")
+  return res.json()
+}
+
+const promiseCustomerTicket = customerTicketDataFetch()
+
+
 function App() {
 
   return (
@@ -11,8 +22,7 @@ function App() {
 
       <Navbar/>
       <TicketStatus/>
-      
-      <CustomerTicketsSection/>
+      <CustomerTicketsSection promiseCustomerTicket={promiseCustomerTicket}/>
       <Footer/>
     </>
   )
