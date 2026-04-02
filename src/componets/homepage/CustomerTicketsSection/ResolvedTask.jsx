@@ -3,9 +3,9 @@ import React from "react";
 const ResolvedTask = ({ item }) => {
   return (
     <div className="card bg-white shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 ease-out rounded-2xl overflow-hidden group">
-      <div className="card-body p-6 items-center text-center">
+      <div className="card-body p-4 lg:p-6 items-center text-center">
         
-        <h2 className="card-title text-xl font-semibold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
+        <h2 className="card-title text-md lg:text-xl font-semibold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
           {item.title}
         </h2>
 

@@ -23,7 +23,7 @@ const TicketStatus = ({tickets , resolvedTickets}) => {
 
             <div className="relative z-10 text-center">
               <p className=" text-lg md:text-2xl opacity-90">In-Progress</p>
-              <h2 className="text-3xl md:text-5xl font-bold mt-2">{tickets.length}</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mt-2">{tickets.length}</h2>
             </div>
           </div>
 
@@ -44,7 +44,7 @@ const TicketStatus = ({tickets , resolvedTickets}) => {
 
             <div className="relative z-10 text-center">
               <p className="text-lg md:text-2xl">Resolved</p>
-              <h2 className="text-3xl md:text-5xl font-bold mt-2">{resolvedTickets.length}</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mt-2">{resolvedTickets.length}</h2>
             </div>
           </div>
         </div>
