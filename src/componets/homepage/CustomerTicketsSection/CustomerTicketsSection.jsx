@@ -1,7 +1,15 @@
 import React, { use } from "react";
 import CustomerTicketCard from "./CustomerTicketCard";
+import TaskStatus from "./TaskStatus";
+import ResolvedTask from "./ResolvedTask";
 
-const CustomerTicketsSection = ({ promiseCustomerTicket , tickets , setTickets  }) => {
+const CustomerTicketsSection = ({
+  promiseCustomerTicket,
+  tickets,
+  setTickets,
+  resolvedTickets,
+  setResolvedTickets,
+}) => {
   const customerTickets = use(promiseCustomerTicket);
 
   return (
@@ -16,7 +24,12 @@ const CustomerTicketsSection = ({ promiseCustomerTicket , tickets , setTickets  
 
             <div className=" grid  xl:grid-cols-2 gap-4">
               {customerTickets.map((ticket) => (
-                <CustomerTicketCard key={ticket.id} ticket={ticket}  tickets={tickets} setTickets={setTickets}/>
+                <CustomerTicketCard
+                  key={ticket.id}
+                  ticket={ticket}
+                  tickets={tickets}
+                  setTickets={setTickets}
+                />
               ))}
             </div>
           </div>
@@ -27,25 +40,63 @@ const CustomerTicketsSection = ({ promiseCustomerTicket , tickets , setTickets  
               Task Status
             </h2>
 
-            <div className="card bg-base-100 shadow-sm ">
-              <div className="card-body items-center text-center">
-                <h2 className="card-title text-2xl ">Card title!</h2>
+            {tickets.length === 0 ? (
+              <div className="bg-white rounded-3xl shadow-sm border border-gray-100 py-16 px-10">
+                <div className="flex flex-col items-center text-center">
+                  {/* Large Icon */}
+                  <div className="w-24 h-24 bg-linear-to-br from-gray-100 to-gray-50 rounded-3xl flex items-center justify-center mb-8 shadow-inner">
+                    <span className="text-6xl opacity-80">📋</span>
+                  </div>
 
-                <button className="btn w-full text-white text-lg btn-success">
-                  Complete
-                </button>
+                  <h2 className="text-3xl font-semibold text-gray-900 mb-4">
+                    No tasks yet
+                  </h2>
+
+                  <p className="text-gray-500 text-[17px] leading-relaxed max-w-md">
+                    Your task list is currently empty. <br />
+                    When you add new tasks, they will appear here.
+                  </p>
+                </div>
               </div>
-            </div>
+            ) : (
+              tickets.map((item) => (
+                <TaskStatus
+                  key={item.id}
+                  item={item}
+                  tickets={tickets}
+                  setTickets={setTickets}
+                  resolvedTickets={resolvedTickets}
+                  setResolvedTickets={setResolvedTickets}
+                />
+              ))
+            )}
 
-             <h2 className="text-2xl font-semibold text-gray-800 mb-6 mt-10">
+            <h2 className="text-2xl font-semibold text-gray-800 mb-6 mt-10">
               Resolved Task
             </h2>
 
-            <div className="card bg-gray-200 shadow-sm ">
-              <div className="card-body items-center text-center">
-                <h2 className="card-title text-2xl">Card title!</h2>
+            {resolvedTickets.length === 0 ? (
+              <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-14">
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-20 h-20 bg-emerald-100 rounded-2xl flex items-center justify-center mb-6">
+                    <span className="text-5xl">🏆</span>
+                  </div>
+
+                  <h2 className="card-title text-2xl font-semibold text-gray-800 mb-3">
+                    Resolved Task is empty
+                  </h2>
+
+                  <p className="text-gray-500 text-base max-w-xs">
+                    No resolved tasks found. <br />
+                    When you complete tasks, they will show up here.
+                  </p>
+                </div>
               </div>
-            </div>
+            ) : (
+              resolvedTickets.map((item) => (
+                <ResolvedTask key={item.id} item={item} />
+              ))
+            )}
           </div>
         </div>
       </div>

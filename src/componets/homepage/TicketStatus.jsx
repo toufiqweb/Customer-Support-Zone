@@ -1,7 +1,7 @@
 import React from "react";
 import waveImg from "../../assets/vector1.png";
 
-const TicketStatus = () => {
+const TicketStatus = ({tickets , resolvedTickets}) => {
   return (
     <section className="py-10 md:py-16 bg-gray-100">
       <div className="max-w-450 mx-auto px-4">
@@ -23,7 +23,7 @@ const TicketStatus = () => {
 
             <div className="relative z-10 text-center">
               <p className=" text-lg md:text-2xl opacity-90">In-Progress</p>
-              <h2 className="text-3xl md:text-5xl font-bold mt-2">0</h2>
+              <h2 className="text-3xl md:text-5xl font-bold mt-2">{tickets.length}</h2>
             </div>
           </div>
 
@@ -44,7 +44,7 @@ const TicketStatus = () => {
 
             <div className="relative z-10 text-center">
               <p className="text-lg md:text-2xl">Resolved</p>
-              <h2 className="text-3xl md:text-5xl font-bold mt-2">0</h2>
+              <h2 className="text-3xl md:text-5xl font-bold mt-2">{resolvedTickets.length}</h2>
             </div>
           </div>
         </div>
