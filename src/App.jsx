@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './App.css'
 import CustomerTicketsSection from './componets/homepage/CustomerTicketsSection/CustomerTicketsSection'
 import Footer from './componets/homepage/Footer'
@@ -17,12 +18,18 @@ const promiseCustomerTicket = customerTicketDataFetch()
 
 function App() {
 
+
+  const [tickets , setTickets] = useState([])
+
+  console.log(tickets);
+  
+
   return (
     <>
 
       <Navbar/>
       <TicketStatus/>
-      <CustomerTicketsSection promiseCustomerTicket={promiseCustomerTicket}/>
+      <CustomerTicketsSection promiseCustomerTicket={promiseCustomerTicket} tickets={tickets} setTickets={setTickets}/>
       <Footer/>
     </>
   )
